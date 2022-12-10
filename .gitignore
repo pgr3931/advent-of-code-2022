@@ -23,3 +23,5 @@ local.sbt
 .bloop/
 .metals/
 metals.sbt
+
+.elixir_ls
