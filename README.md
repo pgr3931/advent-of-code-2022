@@ -13,3 +13,4 @@ Not going for the "best" solutions. Just having fun trying out new languages
 - Day 7: Java
 - Day 8: Scala
 - Day 9: ~~Elixir~~ Julia (I'm too dumb for functional languages)
+- Day 10: Perl
