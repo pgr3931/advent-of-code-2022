@@ -25,3 +25,7 @@ local.sbt
 metals.sbt
 
 .elixir_ls
+
+x64/
+*.user
+*.filters
