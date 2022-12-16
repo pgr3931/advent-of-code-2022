@@ -8,7 +8,6 @@ private:
 	std::string op;
 	int increase;
 	bool useOld;
-	int divisible;
 	int trueMonkey;
 	int falseMonkey;
 
@@ -21,20 +20,14 @@ private:
 		}
 	}
 
-	void relax(bool canRelax) {
-		if (canRelax) {
+	void relax(int commonMultiple) {
+		if (commonMultiple == 0) {
 			float worryLevel = items[0] / 3.0;
 			items[0] = (int)std::floor(worryLevel);
 		}
 		else 
 		{
-			int sum = 1;
-			for (int item : items)
-			{
-				sum *= item;
-			}
-			int worryLevel = items[0] % sum;
-			items[0] = (int)std::floor(worryLevel);
+			items[0] %= commonMultiple;
 		}
 	}
 
@@ -45,6 +38,7 @@ private:
 public:
 	int id;
 	int inspected = 0;
+	int divisible;
 
 	Monkey(int monkey, std::deque<int> startingItems, std::string op, int increase, bool useOld, int divisible, int trueMonkey, int falseMonkey)
 	{
@@ -68,11 +62,11 @@ public:
 		return i;
 	}
 
-	int inspect(bool canRelax) {
+	int inspect(int commonMultiple) {
 		if (items.size() > 0) {
 			inspected++;
 			operation();
-			relax(canRelax);
+			relax(commonMultiple);
 			return nextMonkey();
 		}
 

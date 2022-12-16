@@ -87,7 +87,19 @@ int main()
 		}
 	}
 
-	for (int round = 0; round < 10000; round++)
+	//Part one
+	//int rounds = 20;
+	//int commonMultiple = 0;
+
+	//Part two
+	int rounds = 10000;
+	int commonMultiple = 1;
+	for (Monkey monkey : monkies)
+	{
+		commonMultiple *= monkey.divisible;
+	}
+
+	for (int round = 0; round < rounds; round++)
 	{
 		for (int i = 0; i < monkies.size(); i++)
 		{
@@ -95,8 +107,8 @@ int main()
 
 			while (monkies[i].getItemsSize() > 0)
 			{
-				// For part one simply pass false to inspect
-				int nextMonkey = monkies[i].inspect(false);
+
+				int nextMonkey = monkies[i].inspect(commonMultiple);
 				if (nextMonkey != -1) {
 					int item = monkies[i].getItem();
 					deque<Monkey>::iterator target = find_if(monkies.begin(), monkies.end(), [&](const Monkey& m) { return m.id == nextMonkey; });

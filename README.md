@@ -16,8 +16,9 @@ Not going for the "best" solutions. Just having fun trying out new languages
 - Day 10: Perl
 - Day 11: C++ (not smart enough for part two)
 - Day 12: Kotlin
+- Day 13: Dart
 
-Ranking (my favorite languages after using them once):
+Ranking (my favorite languages after using them at least once):
 
 1. JavaScript
 2. Python
@@ -28,8 +29,8 @@ Ranking (my favorite languages after using them once):
 7. Julia
 8. Scala
 9. Java
-10. Ruby
-11. Perl
-12. Go
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∞\. Elixir
+10. Dart
+11. Ruby
+12. Perl
+13. Go
+14. Elixir
