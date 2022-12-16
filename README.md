@@ -17,6 +17,17 @@ Not going for the "best" solutions. Just having fun trying out new languages
 - Day 11: C++ (not smart enough for part two)
 - Day 12: Kotlin
 - Day 13: Dart
+- Day 14: C
+- Day 15: F#
+- Day 16: Visual Basic
+- Day 17: Swift
+- Day 18: Lua
+- Day 19: Nim
+- Day 20: PHP
+- Day 21: R
+- Day 22: Crystal
+- Day 23: Groovy
+- Day 24: TypeScript
 
 Ranking (my favorite languages after using them at least once):
 
