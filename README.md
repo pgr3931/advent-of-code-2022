@@ -15,6 +15,7 @@ Not going for the "best" solutions. Just having fun trying out new languages
 - Day 9: ~~Elixir~~ Julia (I'm too dumb for functional languages)
 - Day 10: Perl
 - Day 11: C++ (not smart enough for part two)
+- Day 12: Kotlin
 
 Ranking (my favorite languages after using them once):
 
@@ -22,12 +23,13 @@ Ranking (my favorite languages after using them once):
 2. Python
 3. C#
 4. Rust
-5. C++
-6. Julia
-7. Scala
-8. Java
-9. Ruby
-10. Perl
-11. Go
+5. Kotlin
+6. C++
+7. Julia
+8. Scala
+9. Java
+10. Ruby
+11. Perl
+12. Go
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∞\. Elixir

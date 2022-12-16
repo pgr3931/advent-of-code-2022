@@ -29,3 +29,4 @@ metals.sbt
 x64/
 *.user
 *.filters
+output.jar
