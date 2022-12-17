@@ -30,3 +30,7 @@ x64/
 *.user
 *.filters
 output.jar
+*.pdb
+*.obj
+*.ilk
+*.exe
