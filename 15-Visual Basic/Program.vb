@@ -24,9 +24,11 @@ Module Program
 
     Sub Main()
         ' Test
-        Dim row = 10
+        'Dim row = 10
         ' Part one
-        'Dim row = 2000000
+        Dim row = 2000000
+
+        Dim minRadius = Integer.MaxValue
 
         Dim sensorsBeacons = New Dictionary(Of Sensor, Point)
 
@@ -47,6 +49,9 @@ Module Program
             End With
 
             Dim radius = Math.Abs(sensor.X - beacon.X) + Math.Abs(sensor.Y - beacon.Y)
+            If radius < minRadius Then
+                minRadius = radius
+            End If
             For x = sensor.X - radius To sensor.X + radius
                 If Math.Abs(sensor.X - x) + Math.Abs(sensor.Y - row) <= radius Then
                     Dim range As New Point
@@ -75,6 +80,7 @@ Module Program
         Next
 
         Console.WriteLine(result.Count)
+        Console.WriteLine(minRadius)
 
         ' Part two
 
@@ -83,30 +89,7 @@ Module Program
         ' Part two
         'Dim max = 4000000      
 
-        Dim po As New ParallelOptions With {
-            .MaxDegreeOfParallelism = Convert.ToInt32(Math.Ceiling(Environment.ProcessorCount * 0.75))
-}
-
-        Parallel.For(0, max, po, Sub(x, loopStateX)
-                                     Parallel.For(0, max, Sub(y, loopStateY)
-                                                              Dim valid = True
-                                                              For Each sb In sensorsBeacons
-                                                                  Dim sensor = sb.Key
-                                                                  Dim beacon = sb.Value
-                                                                  Dim radius = Math.Abs(sensor.X - beacon.X) + Math.Abs(sensor.Y - beacon.Y)
-
-                                                                  If Math.Abs(x - sensor.X) + Math.Abs(y - sensor.Y) <= radius Then
-                                                                      valid = False
-                                                                      Exit For
-                                                                  End If
-                                                              Next
-
-                                                              If valid Then
-                                                                  Console.WriteLine(x * 4000000 + y)
-                                                                  loopStateY.Break()
-                                                                  loopStateX.Break()
-                                                              End If
-                                                          End Sub)
-                                 End Sub)
+        Dim matrix(max, max) As Boolean
+        matrix(0, 0) = 1
     End Sub
 End Module
